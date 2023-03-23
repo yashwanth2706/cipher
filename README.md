@@ -1,2 +1,2 @@
-# cipher
+# Cipher
 encryption and decryption implementation
