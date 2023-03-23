@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <title>Ceasar Cipher</title>
+    <head>
+      <meta name="view-port" content="width=device-width,initial-scale=1.0">
+        <style>
+        h1{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(5, 14, 136);
+        }
+        p{
+          color:rgb(0, 0, 0);
+        }
+        </style>
+        <script src="cipher.js"> </script>
+        <script src="decoder.js"></script>
+        <script type="text/javascript">
+         function cerr()
+         {
+        if((enval.txt.value=='')||(enval.key.value==''))
+        {
+          caution.style.color='red';
+          document.getElementById('caution').innerHTML='Invalid Input> [Message/Key is empty]';
+         }
+         else
+         if(((enval.txt.value).length>0)&&(enval.key.value>0||enval.key.value<0))
+         {
+         caution.style.color='#03fc0f';
+         document.getElementById('caution').innerHTML='Task Completed';
+        }
+        else
+        if(enval.key.value==0)
+        {
+          caution.style.color='red';
+          document.getElementById('caution').innerHTML='>[Key must be a number greater or lesser than zero]';
+        }
+        else
+        {
+          caution.style.color='red';
+          document.getElementById('caution').innerHTML='>[Key must be a number]';
+          enval.txt.value='';
+        }
+        }
+        </script>
+    </head>
+    <body bgcolor="black">
+      <div style="padding:50px;background-color: rgb(255, 255, 255);">
+        <h1 style="font-size:70px;">Ceasar Cipher</h1>
+        <div style="padding:50px;background-color: rgb(0, 0, 0);color:white;"><h3 style="color:white;font-size: 30px;"><b>Introduction</b></h3>
+          <form><table><td colspan="2" rowspan="1"><center><img src="ceasar.png.jpg"style="vertical-align:middle;height:300px;width:300px;">
+            <img src="rightshift.png"style="vertical-align:middle;height:300px;width:300px;">
+            <img src="leftshift.png"style="vertical-align:middle;height:300px;width:300px;"></center>
+           <textarea readonly style="resize:none;height:200px;width:1340px;">A Caesar cipher is a simple method of encoding messages. Caesar ciphers use a substitution method where letters in the alphabet are shifted by some fixed number of spaces to yield an encoding alphabet. 
+A Caesar cipher with a shift of 111 would encode an A as a B, an M as an N, and a Z as an A, and so on. The method is named after Roman leader Julius Caesar, who used it in his private correspondence.
+The encryption can be represented using modular arithmetic by first transforming the letters into numbers, according to the scheme, A → 0, B → 1, ..., Z → 25.[2] Encryption of a letter x by a shift n can be described mathematically as,[3]
+
+    E n ( x ) = ( x + n ) mod 26. {\displaystyle E_{n}(x)=(x+n)\mod {26}.} E_{n}(x)=(x+n)\mod {26}.
+
+Decryption is performed similarly,
+
+    D n ( x ) = ( x − n ) mod 26. {\displaystyle D_{n}(x)=(x-n)\mod {26}.} D_{n}(x)=(x-n)\mod {26}.
+
+    Ceasar Cipher is easy to Crack through Broot-Force as it only contain 26 possible keys
+    the advacenced version of Ceasar Cipher is Vigenere-Cipher. 
+    learn more about this by following below links.
+           </textarea></td></table></form>
+
+        </div>
+        <center>
+        <p id='caution' style="font-family: 'Courier New', Courier, monospace;">Enter your message below:</p>
+        <form name="enval">
+            <table>
+                <td colspan="5" rowspan="1">
+                    <textarea id='copy'rows="5" cols="5" name="txt"style="resize:none;height:150px;width:600px;text-align:left;color:black;background-color:gray;border-radius:10px"></textarea>
+                    <tr>
+                <td><input type='button'name='encrypt'value='Encrypt'style='height:40px;width:100px;background-color:black;border-radius:70px;color:#41f53b'onclick='encoder();cerr();'></td>
+                 <td><img src="key.jpg"style='vertical-align:middle;height:35px;width:45px;'><input type="text"name="key"style="height:30px;width:45px;color:blue;"></td>
+                 <td><input type="button" name="decrypt" value="Decrypt"style='height:40px;width:100px;background-color:black;border-radius:70px;color:#fa4d4d'onclick='decoder();cerr();'></td>
+                 <td><input type="button"value="copybelow"style='height:40px;width:100px;background-color:black;border-radius:70px;color:white;'onclick='copi();'></td>
+                 <td><input type="button" name="clear" value="Clear"style='height:40px;width:100px;background-color:black;border-radius:70px;color:#11e2f5'onclick='clr();'></td>
+              
+               </tr>
+               </td>
+               </table>
+            </form>
+               <form name="deval">
+                   <table>
+                       <textarea rows="5" cols="5" name='cop'style="resize:none;height:50px;width:600px;text-align:left;color:white;background-color:gray;border-radius:10px;color:black"></textarea>
+                   </table>
+               </form>
+               </center>
+               <p align="center">
+               <a href="https://en.m.wikipedia.org/wiki/Caesar_cipher" style="color: rgb(131, 60, 13);">Know more about on how this work!?</a>
+               <p align="center">
+               <a href="https://brilliant.org/wiki/vigenere-cipher/" style="color: rgb(131, 60, 13);">Learn more about Vigenere-Cipher here</a>
+               </p>
+               </p>
+               </div>
+    </body>
+</html>
