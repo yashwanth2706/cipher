@@ -2,7 +2,7 @@ function encoder()
     {
         let alpha, i, j, msag, y, temp, indcrpt, key=enval.key.value, crpt,jump, ind, orgkey, midkey, space;
         let rmsg=ralpha, newalpha='', ralpha='', store='';
-        const sp=''+' '+'';
+        const sp = " ";
         
         msag=enval.txt.value;
         alpha='kxodnjsrzgvatcyhwbfmeqlpui';
