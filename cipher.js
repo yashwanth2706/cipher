@@ -33,16 +33,15 @@ function encoder()
                 ind=-99;
             }
          
+            midkey = key;
+         
             if(key<0)
             {
                 orgkey=key;
                 orgkey=orgkey*(-1);
                 midkey=orgkey;
             }
-            else
-            {
-                midkey=key;
-            }
+       
             indcrpt=ind+(midkey%26);
          
             if((indcrpt<-26)&&(indcrpt<0))
